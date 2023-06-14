@@ -1,17 +1,104 @@
 import React from 'react';
-import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Logo_Misssion from '../../assets/images/LogoMission.png'
+import Video_about from '../../assets/images/aboutexample.mp4'
+import Cambridge from '../../assets/images/Cambridge.png'
+import Bsologo from '../../assets/images/BSOLogo.png'
+import Aobso from '../../assets/images/Aobso.png'
+import Conis from '../../assets/images/cobis.png'
+import Education from '../../assets/images/EDUCATION_is_GREAT_Flag_Blue_RGB_BNI.png'
 import Early from '../../assets/images/early.png'
 import Primary from '../../assets/images/primary.png'
 import LowerSecondary from '../../assets/images/lower-secondary.png'
 import UpperSecondary from '../../assets/images/upper-secondary.png'
+import  Imagination from '../../assets/images/Imagination.png'
+import  Excellence from '../../assets/images/Excellence.png'
+import  Care from '../../assets/images/Care.png'
+import  Curiosity from '../../assets/images/Curiosity.png'
+import  creativity from '../../assets/images/Creativity.png'
+import './index.scss';
 
 
 const Accueil = () => {
   return (
-    <div>
+    <div className='Home'>
+        {/* {Ambassador video} */}
+        <div className='Ambassador_video'>
+            <div className='test_bg'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-lg-6 left_bg_ambassador'>
+                        <h2>Jeanne D’Arc International School is officially accredited as a BRITISH SCHOOL OVERSEAS</h2>
+                        <img src={Logo_Misssion}></img>
+                    </div>
+                    <div className='col-lg-6'>
+                        <div className='right_video_ambassador'>
+                            <video src={Video_about} className='Video_Amb' controls type="video/mp4"></video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        {/* {About Us} */}
+        <div className='AboutUS'>
+            
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-lg-7'>
+                        <div className='Par_about'>
+                            <h2 className='title_about'>ABOUT <span className='span_Us'>US</span></h2>
+                            <p>Jeanne d'Arc International School is an exciting new English curriculum school in Casablanca with so much to offer your child. Our experienced and passionate staff are committed to ensuring every child develops a love of learning and acquires the skills and knowledge they need for the future.</p>
+                        </div>
+                    </div>
+                    <div className='col-lg-5'>
+                        <div className='video_about'>
+                            <video src={Video_about} className='Video_US' controls type="video/mp4"></video>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        {/* logo_Cambridge/Bsologo/Aobso/Conis */}
+        <div className='section logo_CBAC'>
+            <div className='container'>
+                <div className='row'>
+                    <div className='col-lg-1'></div>
+                    <div className='col-lg-2'>
+                        <div className='image_cbac'>
+                            <img src={Cambridge} className='centre_image'></img>
+                        </div>
+                    </div>
+                    <div className='col-lg-2'>
+                        <div className='image_cbac'>
+                            <img src={Bsologo}></img>
+                        </div>
+                    </div>
+                    <div className='col-lg-2'>
+                        <div className='image_cbac'>
+                        <img src={Aobso} className='centre_image'></img>
+                        </div>
+                    </div>
+                    <div className='col-lg-2'>
+                        <div className='image_cbac centre_image'>
+                            <img src={Conis}></img>
+                        </div>
+                    </div>
+                    <div className='col-lg-2'>
+                        <div className='image_cbac'>
+                            <img src={Education}></img>
+                        </div>
+                    </div>
+                    <div className='col-lg-0.5'></div>
+                </div>
+
+            </div>
+        </div>
         {/* Our Curriculum */}
-        <div className='curriculum-div'>    
+        <div className='section curriculum-div'>    
             <div className='container-fluid py-5'>
                 <div className='row'>
                     <div className='col-lg-6 curriculum'>
@@ -72,6 +159,30 @@ const Accueil = () => {
                             <h3>Upper Secondary</h3>
                             <p>Description for Upper Secondary</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className='always_guided'>
+            <h2>ALWAYS <span>GUIDED BY OUR</span> VALUES</h2>
+            <div className='container-fluid'>
+                <div className='row'>
+                    <div className='col-lg-1'></div>
+                    <div className='col-lg-2'>
+                        <img src={Imagination}></img>
+                    </div>
+                    <div className='col-lg-2'>
+                        <img src={Excellence}></img>
+                    </div>
+                    <div className='col-lg-2'>
+                        <img src={Care}></img>
+                    </div>
+                    <div className='col-lg-2'>
+                        <img src={Curiosity}></img>
+                    </div>
+                    <div className='col-lg-2'>
+                        <img src={creativity}></img>
                     </div>
                 </div>
             </div>
