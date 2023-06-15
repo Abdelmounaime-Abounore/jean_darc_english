@@ -224,6 +224,7 @@ body{
     .footer {
         background-color: #073d6a;
         color: white;
+        font-family: 'Montserrat', sans-serif;
 
         .footer-logo {
             display: flex;
@@ -239,7 +240,7 @@ body{
                 margin-top: 25px;
                 margin-bottom: 25px;
                 padding: 7px;
-                font-weight: bold;
+                font-weight: 500;
 
                 &.sitemap {
                     display: inline-block;
@@ -269,12 +270,13 @@ body{
             display: flex;
             justify-content: center; /* Horizontal center */
             align-items: center; /* Vertical center */
+            font-family: 'Montserrat', sans-serif;
 
             p {
                 margin-top: auto;
                 margin-bottom: auto;
                 padding: 20px;
-                font-weight: bold;
+                font-weight: 500;
             }
     }
 }
