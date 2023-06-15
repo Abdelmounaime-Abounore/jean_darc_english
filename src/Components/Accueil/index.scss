@@ -204,10 +204,13 @@ body{
     }
 
     .always_guided{
+        margin-top: 70px;
+        margin-bottom: 70px;
         h2{
             font-weight: 700;
             letter-spacing: -1px;
             color: #073d6a;
+            margin-bottom: 70px;
             display: inline-block;
             transform: scale(1,1.5);
             text-align: center;
@@ -216,5 +219,62 @@ body{
                 border-bottom: 4px solid #e74c3c;
             }
         }
+    }
+
+    .footer {
+        background-color: #073d6a;
+        color: white;
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-elements {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            h6{
+                background-color: #e74c3c;
+                margin-top: 25px;
+                margin-bottom: 25px;
+                padding: 7px;
+                font-weight: bold;
+
+                &.sitemap {
+                    display: inline-block;
+                }
+                &.contact-datails {
+                    display: inline-block;
+                }
+                &.contact-us {
+                    display: inline-block;
+                }
+            }
+    
+            a {
+                text-decoration: none;
+                color: white;
+            }
+            
+            p {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .copy-right {
+        background-color: #e74c3c;  
+        color: white;
+            display: flex;
+            justify-content: center; /* Horizontal center */
+            align-items: center; /* Vertical center */
+
+            p {
+                margin-top: auto;
+                margin-bottom: auto;
+                padding: 20px;
+                font-weight: bold;
+            }
     }
 }
