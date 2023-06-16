@@ -49,7 +49,7 @@ const Accueil = () => {
                                 I am pleased that you are considering enrolling your child in our esteemed institution. We
                                 hope that this website will provide a small window into our community, and encourage you
                                 to explore all the exciting opportunities awaiting students at Jeanne D’Arc International
-                                School. <span>Read more</span> 
+                                School. <a href='' className='read_more'>Read more</a> 
                             </p>
                             <p>PLAY VIDEO</p>
                         </div>
