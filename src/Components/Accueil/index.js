@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo_Misssion from '../../assets/images/LogoMission.png'
 import Logo from '../../assets/images/logo.jpg'
 import Headmaster from '../../assets/images/headmaster.jfif'
+import ChooseUs from '../../assets/images/chooseUs.jfif'
 import Video_about from '../../assets/images/aboutexample.mp4'
 import Cambridge from '../../assets/images/Cambridge.png'
 import Bsologo from '../../assets/images/BSOLogo.png'
@@ -57,6 +58,7 @@ const Accueil = () => {
                 </div>
             </div>
         </div>
+
         {/* {Ambassador video} */}
         <div className='Ambassador_video'>
             <div className='test_bg'>
@@ -194,6 +196,48 @@ const Accueil = () => {
                             <h3>Upper Secondary</h3>
                             <p>Description for Upper Secondary</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Why Choose Our School */}
+
+        <div className="choose-our-shcool">
+            <div className='my-5'>
+                <h2>Why choose our school ?</h2>
+            </div>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="left-side col-lg-4">
+                        <p className='first'>
+                            A British Education,<br />
+                            An International Community
+                        </p>
+                        <p className='second'>
+                            A Gateway to the Future
+                        </p>
+                        <p className='third'>
+                            Expert International Faculty
+                        </p>
+                    </div>
+
+                    <div className="choose-us-img col-lg-4">
+                        <img src={ChooseUs} alt="" />
+                    </div>
+
+                    <div className="right-side col-lg-4">
+                        <p className='fourth'>
+                            A World of Choice and <br />
+                            Opportunity
+                        </p>
+                        <p className='fifth'>
+                            1 Century of Excellence
+                        </p>
+                        <p className='sixth'>
+                            A Place Where Everyone <br />
+                            Makes Difference
+                        </p>
                     </div>
                 </div>
             </div>

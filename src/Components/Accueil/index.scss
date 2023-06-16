@@ -325,4 +325,70 @@ body{
             }
         }
     }
+
+    .choose-our-shcool {
+        background-color: #f0f2f3;
+        color: white;
+        font-weight: 600;
+        h2 {
+            text-align: center;
+            color: #073d6a;
+        }
+
+        .first, .second, .third, .fourth, .fifth, .sixth {
+            display: inline-block;
+            width: 62%;
+            padding: 15px;
+        }
+        .left-side {
+            position: relative;
+            .first {
+                background-color: #8e44ad;
+                position: absolute;
+                top: 10%;
+                left: 45%;
+            }
+            .second {
+                background-color: #3498db;
+                position: absolute;
+                top: 32%;
+                left: 40%;
+            }
+            .third {
+                background-color: #1abc9c;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+        }
+
+        .right-side {
+            position: relative;
+            .fourth {
+                position: absolute;
+                background-color: #e74c3c;
+                top: 14%;
+                right: 45%;
+            }
+            .fifth {
+                position: absolute;
+                top: 29%;
+                right: 40%;
+                background-color: #f1c40f;
+            }
+            .sixth {
+                background-color: #8e44ad;
+                position: absolute;
+                top: 43%;
+                right: 35%;
+            }
+        }
+        .choose-us-img {
+            display: flex;
+            justify-content: center;
+            img {
+                height: 75%;
+            }
+        }
+    }
 }
