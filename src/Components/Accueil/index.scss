@@ -206,6 +206,7 @@ body{
     .always_guided{
         margin-top: 70px;
         margin-bottom: 70px;
+
         h2{
             font-weight: 700;
             letter-spacing: -1px;
@@ -267,16 +268,59 @@ body{
     .copy-right {
         background-color: #e74c3c;  
         color: white;
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+
+        p {
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 20px;
+            font-weight: 600;
+        }
+    }
+
+    .headmaster {
+        
+        .welcome, .title {
+            color: #073d6a;
+            font-weight: 700;
+        }
+
+        hr {
+            width: 5%;
+            margin: auto;
+            border-width: 5px;
+            color: #e74c3c;
+        }
+
+        .title {
+            font-size: 35px;
+        }
+
+        .image {
             display: flex;
-            justify-content: center; 
-            align-items: center; 
-            font-family: 'Montserrat', sans-serif;
+            justify-content: center;
+            align-items: center;
+            img {
+                height: 85%;
+            }
+        }
+
+        .paragraph {
+            background-color: #073d6a;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             p {
-                margin-top: auto;
-                margin-bottom: auto;
-                padding: 20px;
-                font-weight: 600;
+                width: 93%;
+                span {
+                    color:#e74c3c;
+                    font-weight: 700;
+                }
             }
+        }
     }
 }

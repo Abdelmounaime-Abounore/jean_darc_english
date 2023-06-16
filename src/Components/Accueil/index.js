@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo_Misssion from '../../assets/images/LogoMission.png'
 import Logo from '../../assets/images/logo.jpg'
+import Headmaster from '../../assets/images/headmaster.jfif'
 import Video_about from '../../assets/images/aboutexample.mp4'
 import Cambridge from '../../assets/images/Cambridge.png'
 import Bsologo from '../../assets/images/BSOLogo.png'
@@ -24,6 +25,38 @@ import { Link } from 'react-router-dom';
 const Accueil = () => {
   return (
     <div className='Home'>
+
+        {/* Headmaster Welcome */}
+
+        <div className="headmaster">
+            <div className=' welcome text-center'>
+                <p>WELCOME TO JEANNE D’ARC BRITISH SCHOOL</p>
+            </div>
+            <hr />
+            <div className='title text-center my-2'>
+                <p>TODAY’S LEARNERS <br /> TOMORROW’S LEADERS</p>
+            </div>
+            <div className="container-fluid">
+                <div className="row">
+                    <div className='image col-lg-5'>
+                        <img src={Headmaster} alt="" />
+                    </div>
+                    <div className='paragraph col-lg-7'>
+                        <div className="w-75">
+                            <h4>HEADMASTER WELCOME</h4>
+                            <p>
+                                Dear Parents, <br />
+                                I am pleased that you are considering enrolling your child in our esteemed institution. We
+                                hope that this website will provide a small window into our community, and encourage you
+                                to explore all the exciting opportunities awaiting students at Jeanne D’Arc International
+                                School. <span>Read more</span> 
+                            </p>
+                            <p>PLAY VIDEO</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         {/* {Ambassador video} */}
         <div className='Ambassador_video'>
             <div className='test_bg'>
