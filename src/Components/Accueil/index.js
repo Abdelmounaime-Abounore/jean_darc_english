@@ -163,42 +163,43 @@ const Accueil = () => {
                     <div className="card col-lg-3">
                         <div className="card-img">
                             <img className="early" src={Early} alt="" />
-                            <div className="layer layer1"></div>
                         </div>
                         <div className="card-info">
                             <h3>Early</h3>
-                            <p>Description for Early</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
+                        <div className="layer layer1"></div>
                     </div>
+                    
                     <div className="card col-lg-3">
                         <div className="card-img">  
                             <img className="early" src={Primary} alt="" />
-                            <div className="layer layer2"></div>
                         </div>
                         <div className="card-info">
                             <h3>Primary</h3>
-                            <p>Description for Primary</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
+                        <div className="layer layer2"></div>
                     </div>
                     <div className="card col-lg-3">
                         <div className="card-img">
                             <img className="early" src={LowerSecondary} alt="" />
-                            <div className="layer layer3"></div>
                         </div>
                         <div className="card-info">
                             <h3>Lower Secondary</h3>
-                            <p>Description for Lower Secondary</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
+                        <div className="layer layer3"></div>
                     </div>
                     <div className="card col-lg-3">
                         <div className="card-img">
                             <img className="early" src={UpperSecondary} alt="" />
-                            <div className="layer layer4"></div>
                         </div>
                         <div className="card-info">
                             <h3>Upper Secondary</h3>
-                            <p>Description for Upper Secondary</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
+                        <div className="layer layer4"></div>
                     </div>
                 </div>
             </div>

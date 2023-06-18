@@ -53,29 +53,31 @@ body{
             padding-left: 0;
             padding-right: 0;
             border: 0px;
-    
+
+            .layer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 45%;
+                &:hover{
+                    background-color: transparent;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+                }
+                // background-color: rgba(0, 0, 0, 0.75);
+            }
+            .layer1, .layer2{
+                background-color: #df776d;
+            }
+            .layer3 {
+                background-color: #66abda;
+            }
+            .layer4 {
+                background-color: #ac80c0;
+            }
             .card-img {
                 position: relative;
-    
-                .layer {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    opacity: 45%;
-                    // background-color: rgba(0, 0, 0, 0.75);
-                  }
-                .layer1, .layer2{
-                    background-color: #df776d;
-                }
-                .layer3 {
-                    background-color: #66abda;
-                }
-                .layer4 {
-                    background-color: #ac80c0;
-                }
-    
                 img {
                     width: 100%;
                 }
@@ -85,8 +87,16 @@ body{
             position: absolute;
             bottom: 0;
             left: 12px;
-            color: white;
             padding: 20px;
+            h3{
+                color: #fff;
+                font-size: 50px;
+                font-weight: 700;
+            }
+            p{
+                color: #fff;
+                font-weight: 600;
+            }
           }
     }
     .logo_CBAC{
