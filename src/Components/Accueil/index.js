@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo_Misssion from '../../assets/images/LogoMission.png'
 import Logo from '../../assets/images/logo.jpg'
 import Headmaster from '../../assets/images/headmaster.jfif'
-import ChooseUs from '../../assets/images/chooseUs.jfif'
+import ChooseUs from '../../assets/images/chooseUs.png'
 import Video_about from '../../assets/images/aboutexample.mp4'
 import Cambridge from '../../assets/images/Cambridge.png'
 import Bsologo from '../../assets/images/BSOLogo.png'
@@ -19,6 +19,14 @@ import  Excellence from '../../assets/images/Excellence.png'
 import  Care from '../../assets/images/Care.png'
 import  Curiosity from '../../assets/images/Curiosity.png'
 import  creativity from '../../assets/images/Creativity.png'
+import Play from '../../assets/images/Circled Play.png'
+import Great from '../../assets/images/Great Britain.png'
+import Journey from '../../assets/images/Journey.png'
+import Coach from '../../assets/images/Coach.png'
+import Globe from '../../assets/images/Globe.png'
+import anniversary from '../../assets/images/anniversary.png'
+import School from '../../assets/images/School Building.png'
+
 import './index.scss';
 import { Link } from 'react-router-dom';
 
@@ -30,12 +38,9 @@ const Accueil = () => {
         {/* Headmaster Welcome */}
 
         <div className="headmaster">
-            <div className=' welcome text-center'>
-                <p>WELCOME TO JEANNE D’ARC BRITISH SCHOOL</p>
-            </div>
-            <hr />
-            <div className='title text-center my-2'>
-                <p>TODAY’S LEARNERS <br /> TOMORROW’S LEADERS</p>
+            <div className='title_master'>
+                <p className='welcome_title'>WELCOME TO JEANNE <span>D’AR</span>C BRITISH SCHOOL</p>
+                <h2 className='title-section'>TODAY’S LEARNERS TOMORROW’S LEADERS</h2>
             </div>
             <div className="container-fluid">
                 <div className="row">
@@ -43,7 +48,6 @@ const Accueil = () => {
                         <img src={Headmaster} alt="" />
                     </div>
                     <div className='paragraph col-lg-7'>
-                        <div className="w-75">
                             <h4>HEADMASTER WELCOME</h4>
                             <p>
                                 Dear Parents, <br />
@@ -52,8 +56,7 @@ const Accueil = () => {
                                 to explore all the exciting opportunities awaiting students at Jeanne D’Arc International
                                 School. <a href='' className='read_more'>Read more</a> 
                             </p>
-                            <p>PLAY VIDEO</p>
-                        </div>
+                            <a href='' className='play'><img src={Play}></img>PLAY VIDEO</a>
                     </div>
                 </div>
             </div>
@@ -68,7 +71,7 @@ const Accueil = () => {
                         <h2>Jeanne D’Arc International School is officially accredited as a BRITISH SCHOOL OVERSEAS</h2>
                         <img src={Logo_Misssion}></img>
                     </div>
-                    <div className='col-lg-6'>
+                    <div className='col-lg-6 right_video_ambassador'>
                         <div className='right_video_ambassador'>
                             <video src={Video_about} className='Video_Amb' controls type="video/mp4"></video>
                         </div>
@@ -204,22 +207,26 @@ const Accueil = () => {
         {/* Why Choose Our School */}
 
         <div className="choose-our-shcool">
-            <div className='my-5'>
-                <h2>Why choose our school ?</h2>
+            <div className='title_our_school'>
+                <h2 className='title-section'>Why choose our school ?</h2>
             </div>
             <div className="container-fluid">
                 <div className="row">
                     <div className="left-side col-lg-4">
-                        <p className='first'>
-                            A British Education,<br />
-                            An International Community
-                        </p>
-                        <p className='second'>
-                            A Gateway to the Future
-                        </p>
-                        <p className='third'>
-                            Expert International Faculty
-                        </p>
+                        <div className='first'>
+                            <img src={Great}></img>
+                            <p>A British Education, An International Community</p>
+                        </div>
+                        <div className='second'>
+                            <img src={Journey}></img>
+                            <p>A Gateway to the Future</p>
+                        </div>
+                        <div className='third'>
+                            <img src={Coach}></img>
+                            <p>Expert International Faculty</p>
+                        </div>
+                        
+                        
                     </div>
 
                     <div className="choose-us-img col-lg-4">
@@ -227,24 +234,25 @@ const Accueil = () => {
                     </div>
 
                     <div className="right-side col-lg-4">
-                        <p className='fourth'>
-                            A World of Choice and <br />
-                            Opportunity
-                        </p>
-                        <p className='fifth'>
-                            1 Century of Excellence
-                        </p>
-                        <p className='sixth'>
-                            A Place Where Everyone <br />
-                            Makes Difference
-                        </p>
+                        <div className='fourth'>
+                            <img src={Globe}></img>
+                            <p>A World of Choice and Opportunity</p>
+                        </div>
+                        <div className='fifth'>
+                            <img src={anniversary}></img>
+                            <p>1 Century of Excellence</p>
+                        </div>
+                        <div className='sixth'>
+                            <img src={School}></img>
+                            <p>A Place Where Everyone Makes Difference</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div className='always_guided'>
-            <h2>ALWAYS <span>GUIDED BY OUR</span> VALUES</h2>
+            <h2 className='title-section'>ALWAYS <span>GUIDED BY OUR</span> VALUES</h2>
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-lg-1'></div>

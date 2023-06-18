@@ -1,6 +1,8 @@
 
 @import url('https://fonts.cdnfonts.com/css/montserrat');
-
+a{
+    text-decoration: none;
+}
 // mixin max
 @mixin res_max($screen){
     @media screen and (max-width: $screen){
@@ -21,8 +23,7 @@ $screen-xxl-max: 2000px;
         @content;
     }
 }
-$screen-xxl-min: 2000px;
-$screen-xxl-large-min: 2500px;
+$screen-xxl-large-min: 2000px;
 $screen-xxl-xlarge-min: 3000px;
 // @include res_min($screen--min) {
 // }
@@ -99,7 +100,7 @@ body{
             }
             img{
                 width: 100%;
-                @include res_max($screen-sm-max) {
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max){
                     width: 250px;
                 }
             }
@@ -116,7 +117,7 @@ body{
         display: flex;
         justify-content: center;
         align-items: center;
-        @include res_max($screen-sm-max);@include res_max($screen-md-max) {
+        @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max){
             height: 100%;
         }
         .Par_about{
@@ -136,7 +137,7 @@ body{
                 color: #073d6a;
                 padding: 30px 0 ;
                 font-weight: 500;
-                @include res_max($screen-sm-max) {
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                     width: 100%;
                 }
             }
@@ -144,7 +145,7 @@ body{
         .Video_US{
             width: 100%;
             height: 350px;
-            @include res_max($screen-sm-max) {
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                 height: auto;
             }
         }
@@ -156,16 +157,42 @@ body{
             display: flex;
             justify-content: center;
             align-items: center;
-            @include res_max($screen-sm-max) {
-                height: calc(250vw - 300px);
+            @include res_min($screen-xxl-large-min) {
+                height: 100%;
+            }
+            @include res_max($screen-xl-max){
+                position: relative;
+                top: 40px;
+                height: calc(65vw - 300px);
+                align-items: normal;
+            }
+            @include res_max($screen-lg-max){
+                height: calc(120vw - 300px);
+            }
+            @include res_max($screen-md-max) {
+                height: calc(140vw - 300px);
+                align-items: normal;
+            }
+            @include res_max($screen-sm-max){
+                height: calc(240vw - 300px);
+                align-items: normal;
             }
         }
         .left_bg_ambassador{
-            @include res_max($screen-sm-max) {
+            @include res_min($screen-xxl-large-min) {
+                left: -20%;
+                position: relative;
+                height: 450px;
+                align-items: center;
+                display: grid;
+            }
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                 background-color: #fefbef;
                 margin-bottom: 5%;
                 padding: 20px 10px;
+                text-align: center;
             }
+            
             &::before{
                 content: "";
                 width: calc(76vw - 259px);
@@ -176,7 +203,10 @@ body{
                 left: calc(-50vw + 673px);
                 z-index: -1;
                 margin-top: -33px;
-                @include res_max($screen-sm-max) {
+                @include res_min($screen-xxl-large-min) {
+                    margin-top: 13%;
+                }
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                     display: none;
                 }
             }
@@ -187,7 +217,7 @@ body{
             }
             img{
                 margin: 0 30%;
-                @include res_max($screen-sm-max) {
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                     margin: 0 20%;
                     width: 200px;
                 }
@@ -196,7 +226,8 @@ body{
 
 
         .right_video_ambassador{
-            
+            display: flex;
+            align-items: center;
             .Video_Amb{
                 width: 100%;
             }
@@ -206,7 +237,6 @@ body{
     .always_guided{
         margin-top: 70px;
         margin-bottom: 70px;
-
         h2{
             font-weight: 700;
             letter-spacing: -1px;
@@ -220,6 +250,16 @@ body{
                 border-bottom: 4px solid #e74c3c;
             }
         }
+        img{
+            @include res_min($screen-xxl-large-min) {
+                width: 100%
+            }
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                margin: auto;
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
     }
 
     .footer {
@@ -230,6 +270,12 @@ body{
         .footer-logo {
             display: flex;
             align-items: center;
+            img{
+                width: 100%;
+                @include res_max($screen-lg-max) {
+                    width: 40%;
+                }
+            }
         }
 
         .footer-elements {
@@ -281,40 +327,60 @@ body{
     }
 
     .headmaster {
+        .title_master{
+            text-align: center;
+            .welcome_title{
+                font-weight: 800;
+                font-size: 13px;
+                word-spacing: 7px;
+                letter-spacing: 1px;
+                color: #073d6a;
+                transform: scale(1, 2);
+                line-height: 65px;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    font-size: 10px;
+                }
+                span{
+                    border-bottom: 3px solid #e74c3c;
+                }
+            }
+            .title-section{
+                width: 40%;
+                word-spacing: 12px;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    width: 100%;
+                    font-size: 25px;
+                }
+            }
+        }
         
-        .welcome, .title {
-            color: #073d6a;
-            font-weight: 600;
-        }
-
-        hr {
-            width: 5%;
-            margin: auto;
-            border-width: 5px;
-            color: #e74c3c;
-        }
-
-        .title {
-            font-size: 35px;
-        }
 
         .image {
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                text-align: center;
+            }
             img {
                 height: 85%;
                 float: right;
                 top: 8%;
                 position: relative;
                 left: 10%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    float: none;
+                    left: 0;
+                }
             }
         }
 
         .paragraph {
             background-color: #073d6a;
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
+            display: block;
+            padding: 50px 100px;
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                display: block;
+                padding: 25px 15px;
+            }
             p {
                 width: 93%;
                 .read_more{
@@ -323,71 +389,159 @@ body{
                     text-decoration: none;
                 }
             }
+            .play{
+                color: white;
+                img{
+                    margin-right: 5px;
+                }
+            }
         }
     }
 
     .choose-our-shcool {
         background-color: #f0f2f3;
-        color: white;
-        font-weight: 600;
-        h2 {
+        display: grid;
+        .title_our_school{
             text-align: center;
-            color: #073d6a;
+            .title-section{
+                margin: 25px 0 40px 0;
+            }
         }
 
         .first, .second, .third, .fourth, .fifth, .sixth {
-            display: inline-block;
-            width: 62%;
-            padding: 15px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            padding: 20px 8px;
+            @include res_min($screen-xxl-large-min) {
+                padding: 50px 20px;
+            }
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                padding: 10px 4px;
+                width: 100%;
+            }
+            p{
+                margin: 0;
+                left: 17%;
+                position: absolute;
+                font-weight: 700;
+                color: white;
+                font-size: 20px;
+                @include res_min($screen-xxl-large-min) {
+                    font-size: 30px;
+                }
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    font-size: 15px;
+                }
+            }
+            img{
+                width: 40px;
+                height: 40px;
+                object-fit: cover;
+                @include res_min($screen-xxl-large-min) {
+                    width: 60px;
+                    height: 60px;
+                }
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
         }
         .left-side {
             position: relative;
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                position: absolute;
+            }
             .first {
                 background-color: #8e44ad;
                 position: absolute;
-                top: 10%;
-                left: 45%;
+                top: 5%;
+                left: 20%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    left: 0;
+                }
             }
             .second {
                 background-color: #3498db;
                 position: absolute;
-                top: 32%;
-                left: 40%;
+                top: 40%;
+                left: 15%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    left: 0;
+                }
             }
             .third {
                 background-color: #1abc9c;
                 position: absolute;
-                top: 50%;
-                left: 50%;
+                top: 75%;
+                left: 25%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    left: 0;
+                }
             }
         }
 
         .right-side {
             position: relative;
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                height: 100%;
+            }
             .fourth {
                 position: absolute;
                 background-color: #e74c3c;
-                top: 14%;
+                top: 10%;
                 right: 45%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    right: 0;
+                }
             }
             .fifth {
                 position: absolute;
-                top: 29%;
-                right: 40%;
+                top: 35%;
+                right: 35%;
                 background-color: #f1c40f;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    right: 0;
+                }
             }
             .sixth {
                 background-color: #8e44ad;
                 position: absolute;
-                top: 43%;
-                right: 35%;
+                top: 65%;
+                right: 20%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    position: relative;
+                    margin: 0 0 15px;
+                    right: 0;
+                }
             }
         }
         .choose-us-img {
             display: flex;
             justify-content: center;
+            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                top: 270px;
+                position: relative;
+            }
             img {
-                height: 75%;
+                height: 100%;
+                width: 100%;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
+                    height: 60%;
+                    object-fit: cover;
+                    width: 87%;
+                }
             }
         }
     }
