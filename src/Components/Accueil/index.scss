@@ -54,6 +54,16 @@ body{
             padding-right: 0;
             border: 0px;
 
+            p {
+                display: none;
+            }
+
+            &:hover {
+                p {
+                    display: block;
+                }
+            }
+
             .layer {
                 position: absolute;
                 top: 0;
@@ -555,4 +565,151 @@ body{
             }
         }
     }
+
+    .learner-profile {
+        background-color: #3498db;
+
+        .triangle {
+            position: relative;
+            margin: auto;
+            width: 525px;
+            height: 205px;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+            background-color: #f1c40f;
+        
+            h1 {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            text-align: center;
+            color: white;
+            font-weight: 700;
+            }
+        }
+
+        .row  {
+            height: 390px;
+
+            .shape {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 240px;
+                height: 220px;
+                color: #fff;
+                background-color: #ffffff;
+                clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: calc(100% - 15px); 
+                    width: calc(100% - 15px);  
+                    z-index: -1;
+                    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+                }
+
+                h6 {
+                    font-size: 18px;
+                    font-weight: 900;
+                    text-align: center;
+                }
+
+                p {
+                    display: none;
+                    font-size: 13px;
+                    width: 75%;
+                    text-align: center;
+                    font-weight: 600;
+                    color: #073d6a;
+                }
+
+                &:hover{
+                    width: 260px;
+                    height: 240px;
+                    h6 {
+                        color: #8e44ad;
+                    }
+                    p{
+                        display: block;
+                    }
+                }
+            }
+            .shape1 {
+                bottom: 115px;
+                left: 15px;
+
+                &::before{
+                background-color: #e74c3c;
+                }
+            }
+
+            .shape2 {
+                bottom: 85px;
+                left: 15px;
+
+                &::before {
+                background-color: #1abc9c;
+                }
+            }
+
+            .shape3{
+                bottom: 430px;
+                left: 225px;
+
+                &::before {
+                background-color: #8e44ad;
+                }
+            }
+
+            .shape4 {
+                top: 10px;
+                left: -9px;
+
+                &::before {
+                background-color: #e57e22;
+                }
+            }
+
+            .shape5 {
+                bottom: 335px;
+                left: 200px;
+
+                &::before {
+                background-color: #dcbfbf;
+                }
+            }
+
+            .shape6 {
+                bottom: 305px;
+                left: 200px;
+
+                &::before {
+                background-color: #9b59b6;
+                }
+            }
+
+            .shape1, .shape2, .shape3, .shape4, .shape5, .shape6 
+             {
+                &:hover {
+                    &::before {
+                        background-color: white;
+                    }
+                }
+             }
+    
+            .choose-us-img {
+                position: relative;
+                top: -158px;
+                left: 46px;
+                overflow: hidden;
+                height: 547px;
+            }
+        }
+    }
 }
+

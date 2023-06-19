@@ -26,6 +26,7 @@ import Coach from '../../assets/images/Coach.png'
 import Globe from '../../assets/images/Globe.png'
 import anniversary from '../../assets/images/anniversary.png'
 import School from '../../assets/images/School Building.png'
+import LearnerProfile from '../../assets/images/learner-profile-removebg-preview.png'
 
 import './index.scss';
 import { Link } from 'react-router-dom';
@@ -78,6 +79,63 @@ const Accueil = () => {
                     </div>
                 </div>
             </div>
+            </div>
+        </div>
+
+        {/* Learner Profile */}
+
+        <div className='learner-profile'>
+            <div className="triangle">
+                <h1>LEARNER PROFILE</h1>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="left-side col-lg-4">
+                        <div className='shape shape1'>
+                            <h6>OPEN MINDED</h6>
+                            <p>
+                                We celebrate our own cultures and the values and traditions of others. We listen to different views
+                                and grow from experience.
+                            </p>
+                        </div>
+                        <div className='shape shape2'>
+                            <h6>EDUCATED</h6>
+                            <p>
+                                We explore learning across every subject area. We learn about local and global issues.
+                            </p>
+                        </div>
+                        <div className='shape shape3'>
+                            <h6>CREATIVE</h6>
+                            <p>
+                                By generating new ideas, by being oriented towards innovation, by becoming inventive thinkers, by
+                                exploring multiple possibilities. 
+                            </p>
+                        </div>
+                    </div>
+                    <div className="choose-us-img col-lg-4">
+                        <img src={LearnerProfile} alt="" />
+                    </div>
+                    <div className="right-side col-lg-4">
+                        <div className='shape shape4'>
+                            <h6>REFLECTIVE</h6>
+                            <p>
+                                We learn from what we do. We think about the world and consider our own ideas.
+                            </p>
+                        </div>
+                        <div className='shape shape5'>
+                            <h6>COMMUNICATOR</h6>
+                            <p>
+                                We express ourselves confidently and creatively.
+                            </p>
+                        </div>
+                        <div className='shape shape6'>
+                            <h6>LEADER</h6>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -137,6 +195,7 @@ const Accueil = () => {
 
             </div>
         </div>
+
         {/* Our Curriculum */}
         <div className='section curriculum-div'>    
             <div className='container-fluid py-5'>
