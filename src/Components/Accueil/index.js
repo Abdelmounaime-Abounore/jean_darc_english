@@ -1,5 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import Logo_Misssion from '../../assets/images/LogoMission.png'
 import Logo from '../../assets/images/logo.jpg'
 import Headmaster from '../../assets/images/headmaster.jfif'
@@ -33,9 +36,53 @@ import { Link } from 'react-router-dom';
 
 
 const Accueil = () => {
-  return (
-    <div className='Home'>
 
+    const videos = [Video_about,Video_about,Video_about];
+   
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        nextArrow: <Arrow />,
+        prevArrow: <Arrow />
+      };
+
+    function Arrow(props) {
+    const { className, style, onClick } = props;
+    return (
+        <div
+        className={className}
+        style={{ ...style, display: "block", background: "black" }}
+        onClick={onClick}
+        />
+    );
+    }
+    
+    return (
+        <div className='Home'>
+        
+        {/* Slider */}
+        
+        <div className='slider'>
+            <div className='container'>
+                <Slider {...settings}>
+                    {videos.map((video, index) => (
+                        <div className='' key={index}>
+                            <video controls>
+                                <source src={video} type='video/mp4' />
+                            {/* Add additional source tags for different video formats */}
+                            </video>
+                        </div>
+                    ))}
+                </Slider>
+            </div>
+        </div>
+            
+       
+
+        
         {/* Headmaster Welcome */}
 
         <div className="headmaster">
@@ -62,6 +109,8 @@ const Accueil = () => {
                 </div>
             </div>
         </div>
+        
+
 
         {/* {Ambassador video} */}
         <div className='Ambassador_video'>

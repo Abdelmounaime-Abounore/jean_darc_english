@@ -711,5 +711,17 @@ body{
             }
         }
     }
+
+    .slider {
+      
+        .container {
+          width: 80%;
+        }
+      
+        video {
+          width: 100%;
+          height: auto;
+        }
+      }
 }
 
