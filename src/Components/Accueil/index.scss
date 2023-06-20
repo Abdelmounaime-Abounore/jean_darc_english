@@ -32,6 +32,35 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 .Home{
+    .slider{
+        .sliderVideo{
+            .left_sliderContenu{
+                display: flex;
+                align-items: baseline;
+                font-size: 15px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 10%;
+                width: 100%;
+                text-align: left;
+                .border_leftslider{
+                    border-bottom: 15px solid red;
+                    width: 60px;
+                    display: block;
+                    
+                    border-left: 15px solid red;
+                    height: 60px;
+                    display: block;
+                }
+                p{
+                    color: #fff;
+                    margin-left: 10px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
     .curriculum-div {
         .container-fluid {
             background-image: url(../../assets/images/curriculum.png);

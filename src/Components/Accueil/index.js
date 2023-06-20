@@ -1,8 +1,5 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css'
-import 'slick-carousel/slick/slick-theme.css'
 import Logo_Misssion from '../../assets/images/LogoMission.png'
 import Logo from '../../assets/images/logo.jpg'
 import Headmaster from '../../assets/images/headmaster.jfif'
@@ -31,34 +28,39 @@ import anniversary from '../../assets/images/anniversary.png'
 import School from '../../assets/images/School Building.png'
 import LearnerProfile from '../../assets/images/learner-profile-removebg-preview.png'
 
+import sliderVideo_1 from '../../assets/images/Care-543 (1).mp4'
+import sliderVideo_2 from '../../assets/images/Curiosity-532.mp4'
+import sliderVideo_3 from '../../assets/images/Respect-539 (2).mp4'
+
 import './index.scss';
 import { Link } from 'react-router-dom';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+// import "slick-carousel/slick/slick.css"; 
+// import "slick-carousel/slick/slick-theme.css";
+// import Slider from 'react-slick'
 
 
 const Accueil = () => {
-
-    const videos = [Video_about,Video_about,Video_about];
-   
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        nextArrow: <Arrow />,
-        prevArrow: <Arrow />
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 1
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 1
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 1
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
       };
-
-    function Arrow(props) {
-    const { className, style, onClick } = props;
-    return (
-        <div
-        className={className}
-        style={{ ...style, display: "block", background: "black" }}
-        onClick={onClick}
-        />
-    );
-    }
     
     return (
         <div className='Home'>
@@ -66,18 +68,29 @@ const Accueil = () => {
         {/* Slider */}
         
         <div className='slider'>
-            <div className='container'>
-                <Slider {...settings}>
-                    {videos.map((video, index) => (
-                        <div className='' key={index}>
-                            <video controls>
-                                <source src={video} type='video/mp4' />
-                            {/* Add additional source tags for different video formats */}
-                            </video>
-                        </div>
-                    ))}
-                </Slider>
-            </div>
+            <Carousel swipeable={false}
+                    draggable={false}
+                    showDots={false}
+                    responsive={responsive}
+                    infinite={true}
+                    keyBoardControl={true}
+                    transitionDuration={500}
+                    removeArrowOnDeviceType={["tablet", "mobile"]}
+            >
+                <div className='sliderVideo'>
+                    <video src={sliderVideo_1} type="video/mp4" width={'100%'} autoPlay muted></video>
+                    <div className='left_sliderContenu'>
+                        <span className='border_leftslider'></span>
+                        <p>always guided by our values</p>
+                    </div>
+                </div>
+                <div className='sliderVideo'>
+                    <video src={sliderVideo_2} type="video/mp4" width={'100%'} autoPlay muted></video>
+                </div>
+                <div className='sliderVideo'>
+                    <video src={sliderVideo_3} type="video/mp4" width={'100%'} autoPlay muted></video>
+                </div>
+            </Carousel>
         </div>
             
        
