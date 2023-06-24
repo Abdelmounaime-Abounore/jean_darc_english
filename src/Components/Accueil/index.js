@@ -36,6 +36,7 @@ import './index.scss';
 import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import { Button } from 'bootstrap';
 // import "slick-carousel/slick/slick.css"; 
 // import "slick-carousel/slick/slick-theme.css";
 // import Slider from 'react-slick'
@@ -56,6 +57,7 @@ const Accueil = () => {
           breakpoint: { max: 1024, min: 464 },
           items: 1
         },
+
         mobile: {
           breakpoint: { max: 464, min: 0 },
           items: 1
@@ -75,7 +77,6 @@ const Accueil = () => {
                     infinite={true}
                     keyBoardControl={true}
                     transitionDuration={500}
-                    removeArrowOnDeviceType={["tablet", "mobile"]}
             >
                 <div className='sliderVideo'>
                     <video src={sliderVideo_1} type="video/mp4" width={'100%'} autoPlay muted></video>
@@ -83,12 +84,37 @@ const Accueil = () => {
                         <span className='border_leftslider'></span>
                         <p>always guided by our values</p>
                     </div>
+
+                    <div className='right_sliderContenu'>
+                        <h4 className='rightSlider_title'>Care</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue</p>
+                    </div>
                 </div>
+
                 <div className='sliderVideo'>
                     <video src={sliderVideo_2} type="video/mp4" width={'100%'} autoPlay muted></video>
+                    <div className='left_sliderContenu'>
+                        <span className='border_leftslider'></span>
+                        <p>always guided by our values</p>
+                    </div>
+
+                    <div className='right_sliderContenu'>
+                        <h4 className='rightSlider_title'>Curiosity</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue</p>
+                    </div>
                 </div>
+
                 <div className='sliderVideo'>
                     <video src={sliderVideo_3} type="video/mp4" width={'100%'} autoPlay muted></video>
+                    <div className='left_sliderContenu'>
+                        <span className='border_leftslider'></span>
+                        <p>always guided by our values</p>
+                    </div>
+
+                    <div className='right_sliderContenu'>
+                        <h4 className='rightSlider_title'>Respect</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue</p>
+                    </div>
                 </div>
             </Carousel>
         </div>
@@ -153,9 +179,9 @@ const Accueil = () => {
             <div className="container">
                 <div className="row">
                     <div className="left-side col-lg-4">
-                        <div className='shape shape1'>
-                            <h6>OPEN MINDED</h6>
-                            <p>
+                        <div className='shape shape1 Groupe_15 Polygone_1'>
+                            <h6 className='COMMUNICATOR'>OPEN MINDED</h6>
+                            <p className='We_express_ourselves_confidetly_and_creatively' >
                                 We celebrate our own cultures and the values and traditions of others. We listen to different views
                                 and grow from experience.
                             </p>
