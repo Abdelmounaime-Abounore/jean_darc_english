@@ -6,7 +6,7 @@
         @content;
     }
 }
-$screen-sm-max : 454px;
+$screen-sm-max : 654px;
 $screen-md-max: 768px;
 $screen-lg-max: 992px;
 $screen-xl-max: 1200px;
@@ -39,12 +39,13 @@ body{
     margin-bottom: 70px;
     display: inline-block;
     transform: scale(1, 1.5);
+    @include res_max($screen-sm-max) {
+        width: 100%;
+        font-size: 20px;
+    }
     @include res_min($screen-xxl-large-min) {
         font-size: 55px;
     }
-    @include res_max($screen-sm-max) {
-        width: 100%;
-        font-size: 25px;
-    }
+    
 
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo_Misssion from '../../assets/images/LogoMission.png'
 import Logo from '../../assets/images/logo.jpg'
@@ -14,11 +14,6 @@ import Early from '../../assets/images/early.png'
 import Primary from '../../assets/images/primary.png'
 import LowerSecondary from '../../assets/images/lower-secondary.png'
 import UpperSecondary from '../../assets/images/upper-secondary.png'
-import  Imagination from '../../assets/images/Imagination.png'
-import  Excellence from '../../assets/images/Excellence.png'
-import  Care from '../../assets/images/Care.png'
-import  Curiosity from '../../assets/images/Curiosity.png'
-import  creativity from '../../assets/images/Creativity.png'
 import Play from '../../assets/images/Circled Play.png'
 import Great from '../../assets/images/Great Britain.png'
 import Journey from '../../assets/images/Journey.png'
@@ -27,7 +22,7 @@ import Globe from '../../assets/images/Globe.png'
 import anniversary from '../../assets/images/anniversary.png'
 import School from '../../assets/images/School Building.png'
 import LearnerProfile from '../../assets/images/learner-profile-removebg-preview.png'
-
+import guided_girl from '../../assets/images/2S3A0912.png'
 import sliderVideo_1 from '../../assets/images/Care-543 (1).mp4'
 import sliderVideo_2 from '../../assets/images/Curiosity-532.mp4'
 import sliderVideo_3 from '../../assets/images/Respect-539 (2).mp4'
@@ -43,6 +38,23 @@ import { Button } from 'bootstrap';
 
 
 const Accueil = () => {
+    const animateOnScroll = () => {
+        const elementsToAnimate = document.querySelectorAll('.animate-from-right, .animate-from-left, .animate-from-bottom, .animate-from-top, .animate-from-in');
+      
+        elementsToAnimate.forEach(element => {
+          const elementOffset = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+      
+          if (elementOffset < windowHeight - 100) {
+            element.classList.add('animate');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', animateOnScroll);
+
+
+
     const responsive = {
         superLargeDesktop: {
           // the naming can be any, depends on you.
@@ -124,17 +136,17 @@ const Accueil = () => {
         
         {/* Headmaster Welcome */}
 
-        <div className="headmaster">
+        <div className="headmaster section">
             <div className='title_master'>
                 <p className='welcome_title'>WELCOME TO JEANNE <span>D’AR</span>C BRITISH SCHOOL</p>
                 <h2 className='title-section'>TODAY’S LEARNERS TOMORROW’S LEADERS</h2>
             </div>
             <div className="container-fluid">
                 <div className="row">
-                    <div className='image col-lg-5'>
+                    <div className='image col-lg-5 element animate-from-left'>
                         <img src={Headmaster} alt="" />
                     </div>
-                    <div className='paragraph col-lg-7'>
+                    <div className='paragraph col-lg-7 element animate-from-right'>
                             <h4>HEADMASTER WELCOME</h4>
                             <p>
                                 Dear Parents, <br />
@@ -152,15 +164,15 @@ const Accueil = () => {
 
 
         {/* {Ambassador video} */}
-        <div className='Ambassador_video'>
+        <div className='Ambassador_video section'>
             <div className='test_bg'>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-lg-6 left_bg_ambassador'>
+                    <div className='col-lg-6 left_bg_ambassador element animate-from-left'>
                         <h2>Jeanne D’Arc International School is officially accredited as a BRITISH SCHOOL OVERSEAS</h2>
                         <img src={Logo_Misssion}></img>
                     </div>
-                    <div className='col-lg-6 right_video_ambassador'>
+                    <div className='col-lg-6 right_video_ambassador element animate-from-bottom'>
                         <div className='right_video_ambassador'>
                             <video src={Video_about} className='Video_Amb' controls type="video/mp4"></video>
                         </div>
@@ -172,14 +184,14 @@ const Accueil = () => {
 
         {/* Learner Profile */}
 
-        <div className='learner-profile'>
-            <div className="triangle">
+        <div className='learner-profile section'>
+            <div className="triangle animate-from-top">
                 <h1>LEARNER PROFILE</h1>
             </div>
             <div className="container">
                 <div className="row">
-                    <div className="left-side col-lg-4">
-                        <div className='shape shape1 Groupe_15 Polygone_1'>
+                    <div className="left-side col-lg-4 animate-from-left">
+                        <div className='shape shape1'>
                             <h6 className='COMMUNICATOR'>OPEN MINDED</h6>
                             <p className='We_express_ourselves_confidetly_and_creatively' >
                                 We celebrate our own cultures and the values and traditions of others. We listen to different views
@@ -200,10 +212,10 @@ const Accueil = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="choose-us-img col-lg-4">
+                    <div className="choose-us-img col-lg-4 animate-from-bottom">
                         <img src={LearnerProfile} alt="" />
                     </div>
-                    <div className="right-side col-lg-4">
+                    <div className="right-side col-lg-4 animate-from-right">
                         <div className='shape shape4'>
                             <h6>REFLECTIVE</h6>
                             <p>
@@ -228,17 +240,17 @@ const Accueil = () => {
         </div>
 
         {/* {About Us} */}
-        <div className='AboutUS'>
+        <div className='AboutUS section'>
             
             <div className='container'>
                 <div className='row'>
-                    <div className='col-lg-7'>
+                    <div className='col-lg-7 animate-from-bottom'>
                         <div className='Par_about'>
                             <h2 className='title_about'>ABOUT <span className='span_Us'>US</span></h2>
                             <p>Jeanne d'Arc International School is an exciting new English curriculum school in Casablanca with so much to offer your child. Our experienced and passionate staff are committed to ensuring every child develops a love of learning and acquires the skills and knowledge they need for the future.</p>
                         </div>
                     </div>
-                    <div className='col-lg-5'>
+                    <div className='col-lg-5 animate-from-bottom'>
                         <div className='video_about'>
                             <video src={Video_about} className='Video_US' controls type="video/mp4"></video>
                         </div>
@@ -285,13 +297,13 @@ const Accueil = () => {
         </div>
 
         {/* Our Curriculum */}
-        <div className='section curriculum-div'>    
-            <div className='container-fluid py-5'>
+        <div className='section curriculum-div '>    
+            <div className='container-fluid py-5 animate-from-in'>
                 <div className='row'>
                     <div className='col-lg-6 curriculum'>
                         <h3>OUR CURRICULUM</h3>
                     </div>
-                    <div className='col-lg-5 curriculum'>
+                    <div className='col-lg-5 curriculum '>
                         <p>
                             Our curriculum, spanning from Early Years to Year 11, showcases the creativity and dedication of our teaching staff. It adheres to international standards while considering the local dimension of learning in Morocco. We prioritize subjects such as Moral, Social, and Cultural Studies, along with Arabic and Islamic Studies, aligning with the Ministry of Education's guidelines.
                             Our primary goal is to lay a solid foundation for your child's future success, nurturing their academic, social, and emotional growth while ensuring
@@ -304,10 +316,10 @@ const Accueil = () => {
 
         {/* Cycles */}
         
-        <div className='cycles-div'>
+        <div className='cycles-div section'>
             <div className='container-fluid'>
                 <div className="row">
-                    <div className="card col-lg-3">
+                    <div className="card col-lg-3 animate-from-in">
                         <div className="card-img">
                             <img className="early" src={Early} alt="" />
                         </div>
@@ -318,7 +330,7 @@ const Accueil = () => {
                         <div className="layer layer1"></div>
                     </div>
                     
-                    <div className="card col-lg-3">
+                    <div className="card col-lg-3 animate-from-in">
                         <div className="card-img">  
                             <img className="early" src={Primary} alt="" />
                         </div>
@@ -328,7 +340,7 @@ const Accueil = () => {
                         </div>
                         <div className="layer layer2"></div>
                     </div>
-                    <div className="card col-lg-3">
+                    <div className="card col-lg-3 animate-from-in">
                         <div className="card-img">
                             <img className="early" src={LowerSecondary} alt="" />
                         </div>
@@ -338,7 +350,7 @@ const Accueil = () => {
                         </div>
                         <div className="layer layer3"></div>
                     </div>
-                    <div className="card col-lg-3">
+                    <div className="card col-lg-3 animate-from-in">
                         <div className="card-img">
                             <img className="early" src={UpperSecondary} alt="" />
                         </div>
@@ -354,22 +366,22 @@ const Accueil = () => {
 
         {/* Why Choose Our School */}
 
-        <div className="choose-our-shcool">
+        <div className="choose-our-shcool section">
             <div className='title_our_school'>
                 <h2 className='title-section'>Why choose our school ?</h2>
             </div>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="left-side col-lg-4">
-                        <div className='first'>
+                    <div className="left-side col-lg-4 animate-from-left">
+                        <div className='first card_our_school'>
                             <img src={Great}></img>
                             <p>A British Education, An International Community</p>
                         </div>
-                        <div className='second'>
+                        <div className='second card_our_school'>
                             <img src={Journey}></img>
                             <p>A Gateway to the Future</p>
                         </div>
-                        <div className='third'>
+                        <div className='third card_our_school'>
                             <img src={Coach}></img>
                             <p>Expert International Faculty</p>
                         </div>
@@ -377,20 +389,20 @@ const Accueil = () => {
                         
                     </div>
 
-                    <div className="choose-us-img col-lg-4">
+                    <div className="choose-us-img col-lg-4 animate-from-bottom">
                         <img src={ChooseUs} alt="" />
                     </div>
 
-                    <div className="right-side col-lg-4">
-                        <div className='fourth'>
+                    <div className="right-side col-lg-4 animate-from-right">
+                        <div className='fourth card_our_school'>
                             <img src={Globe}></img>
                             <p>A World of Choice and Opportunity</p>
                         </div>
-                        <div className='fifth'>
+                        <div className='fifth card_our_school'>
                             <img src={anniversary}></img>
                             <p>1 Century of Excellence</p>
                         </div>
-                        <div className='sixth'>
+                        <div className='sixth card_our_school'>
                             <img src={School}></img>
                             <p>A Place Where Everyone Makes Difference</p>
                         </div>
@@ -399,25 +411,35 @@ const Accueil = () => {
             </div>
         </div>
 
-        <div className='always_guided'>
+        <div className='always_guided section'>
             <h2 className='title-section'>ALWAYS <span>GUIDED BY OUR</span> VALUES</h2>
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-lg-1'></div>
-                    <div className='col-lg-2'>
-                        <img src={Imagination}></img>
+                    <div className='col-lg-2 animate-from-bottom'>
+                        <div className='bg_girl girl1'>
+                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
+                        </div>
                     </div>
-                    <div className='col-lg-2'>
-                        <img src={Excellence}></img>
+                    <div className='col-lg-2 animate-from-bottom'>
+                        <div className='bg_girl girl2'>
+                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
+                        </div>
                     </div>
-                    <div className='col-lg-2'>
-                        <img src={Care}></img>
+                    <div className='col-lg-2 animate-from-bottom'>
+                    <div className='bg_girl girl3'>
+                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
+                        </div>
                     </div>
-                    <div className='col-lg-2'>
-                        <img src={Curiosity}></img>
+                    <div className='col-lg-2 animate-from-bottom'>
+                    <div className='bg_girl girl4'>
+                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
+                        </div>
                     </div>
-                    <div className='col-lg-2'>
-                        <img src={creativity}></img>
+                    <div className='col-lg-2 animate-from-bottom'>
+                    <div className='bg_girl girl5'>
+                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -468,12 +490,6 @@ const Accueil = () => {
             <p>ALL RIGHTS RESERVED  © 2023  - JEANNE D’ARC INTERNATIONAL SCHOOL</p>
         </div>
     </div>
-
-    
-
-    
-
-
   );
 };
 
