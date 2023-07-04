@@ -1,9 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo_Misssion from '../../assets/images/LogoMission.png'
 import Logo from '../../assets/images/logo.jpg'
 import Headmaster from '../../assets/images/headmaster.jfif'
-import ChooseUs from '../../assets/images/chooseUs.png'
+import chooseUs_desktop from '../../assets/images/chooseUs_desktop.png'
+import chooseUs_mobile from '../../assets/images/chooseUs_mobile.png'
 import Video_about from '../../assets/images/aboutexample.mp4'
 import Cambridge from '../../assets/images/Cambridge.png'
 import Bsologo from '../../assets/images/BSOLogo.png'
@@ -23,10 +24,10 @@ import anniversary from '../../assets/images/anniversary.png'
 import School from '../../assets/images/School Building.png'
 import LearnerProfile from '../../assets/images/learner-profile-removebg-preview.png'
 import guided_girl from '../../assets/images/2S3A0912.png'
-import sliderVideo_1 from '../../assets/images/Care-543 (1).mp4'
-import sliderVideo_2 from '../../assets/images/Curiosity-532.mp4'
-import sliderVideo_3 from '../../assets/images/Respect-539 (2).mp4'
-
+import sliderVideo_1 from '../../assets/images/integrity--.mp4'
+import sliderVideo_2 from '../../assets/images/Curious--.mp4'
+import sliderVideo_3 from '../../assets/images/committement--.mp4'
+import sliderVideo_4 from '../../assets/images/excellence--.mp4'
 import './index.scss';
 import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
@@ -55,41 +56,76 @@ const Accueil = () => {
 
 
 
-    const responsive = {
-        superLargeDesktop: {
-          // the naming can be any, depends on you.
-          breakpoint: { max: 4000, min: 3000 },
-          items: 1
-        },
-        desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: 1
-        },
-        tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 1
-        },
+    // const responsive = {
+    //     superLargeDesktop: {
+    //       // the naming can be any, depends on you.
+    //       breakpoint: { max: 4000, min: 3000 },
+    //       items: 1
+    //     },
+    //     desktop: {
+    //       breakpoint: { max: 3000, min: 1024 },
+    //       items: 1
+    //     },
+    //     tablet: {
+    //       breakpoint: { max: 1024, min: 464 },
+    //       items: 1
+    //     },
 
-        mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: 1
-        }
-      };
-    
+    //     mobile: {
+    //       breakpoint: { max: 464, min: 0 },
+    //       items: 1
+    //     }
+    //   };
+        const responsive = {
+          superLargeDesktop: {
+            breakpoint: { max: 4000, min: 3000 },
+            items: 1
+          },
+          desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1
+          },
+          tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1
+          },
+          mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1
+          }
+        };
+      
+        const [activeItem, setActiveItem] = useState(0);
+        const carouselRef = useRef(null);
+
+        useEffect(() => {
+    const timer = setInterval(() => {
+      carouselRef.current.next();
+    }, 6000); // Switch to next slider every 6 seconds
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+        
     return (
         <div className='Home'>
         
         {/* Slider */}
+    
         
         <div className='slider'>
-            <Carousel swipeable={false}
-                    draggable={false}
-                    showDots={false}
-                    responsive={responsive}
-                    infinite={true}
-                    keyBoardControl={true}
-                    transitionDuration={500}
-            >
+            <Carousel
+            swipeable={false}
+            draggable={false}
+            showDots={false}
+            responsive={responsive}
+            infinite={true}
+            keyBoardControl={true}
+            transitionDuration={600}
+            ref={carouselRef}
+            beforeChange={(oldIndex, newIndex) => setActiveItem(newIndex)}
+        >
                 <div className='sliderVideo'>
                     <video src={sliderVideo_1} type="video/mp4" width={'100%'} autoPlay muted></video>
                     <div className='left_sliderContenu'>
@@ -98,8 +134,8 @@ const Accueil = () => {
                     </div>
 
                     <div className='right_sliderContenu'>
-                        <h4 className='rightSlider_title'>Care</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue</p>
+                        <h4 className='rightSlider_title'>Integrity</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                     </div>
                 </div>
 
@@ -111,8 +147,8 @@ const Accueil = () => {
                     </div>
 
                     <div className='right_sliderContenu'>
-                        <h4 className='rightSlider_title'>Curiosity</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue</p>
+                        <h4 className='rightSlider_title'>Curious</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                     </div>
                 </div>
 
@@ -124,8 +160,21 @@ const Accueil = () => {
                     </div>
 
                     <div className='right_sliderContenu'>
-                        <h4 className='rightSlider_title'>Respect</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis congue</p>
+                        <h4 className='rightSlider_title'>Committement</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                    </div>
+                </div>
+
+                <div className='sliderVideo'>
+                    <video src={sliderVideo_4} type="video/mp4" width={'100%'} autoPlay muted></video>
+                    <div className='left_sliderContenu'>
+                        <span className='border_leftslider'></span>
+                        <p>always guided by our values</p>
+                    </div>
+
+                    <div className='right_sliderContenu'>
+                        <h4 className='rightSlider_title'>excellence</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
                     </div>
                 </div>
             </Carousel>
@@ -139,7 +188,7 @@ const Accueil = () => {
         <div className="headmaster section">
             <div className='title_master'>
                 <p className='welcome_title'>WELCOME TO JEANNE <span>D’AR</span>C BRITISH SCHOOL</p>
-                <h2 className='title-section'>TODAY’S LEARNERS TOMORROW’S LEADERS</h2>
+                <h2 className='title-section'>TODAY’S LEARNERS <br /> TOMORROW’S LEADERS</h2>
             </div>
             <div className="container-fluid">
                 <div className="row">
@@ -153,7 +202,7 @@ const Accueil = () => {
                                 I am pleased that you are considering enrolling your child in our esteemed institution. We
                                 hope that this website will provide a small window into our community, and encourage you
                                 to explore all the exciting opportunities awaiting students at Jeanne D’Arc International
-                                School. <a href='' className='read_more'>Read more</a> 
+                                School. <a href='#' className='read_more'>Read more</a> 
                             </p>
                             <a href='' className='play'><img src={Play}></img>PLAY VIDEO</a>
                     </div>
@@ -169,7 +218,7 @@ const Accueil = () => {
             <div className='container'>
                 <div className='row'>
                     <div className='col-lg-6 left_bg_ambassador element animate-from-left'>
-                        <h2>Jeanne D’Arc International School is officially accredited as a BRITISH SCHOOL OVERSEAS</h2>
+                        <h2>Jeanne D’Arc International School is officially accredited as a <br /> BRITISH SCHOOL OVERSEAS</h2>
                         <img src={Logo_Misssion}></img>
                     </div>
                     <div className='col-lg-6 right_video_ambassador element animate-from-bottom'>
@@ -191,7 +240,7 @@ const Accueil = () => {
             <div className="container">
                 <div className="row">
                     <div className="left-side col-lg-4 animate-from-left">
-                        <div className='shape shape1'>
+                        <div className='shape shape1 Groupe_15 Polygone_1'>
                             <h6 className='COMMUNICATOR'>OPEN MINDED</h6>
                             <p className='We_express_ourselves_confidetly_and_creatively' >
                                 We celebrate our own cultures and the values and traditions of others. We listen to different views
@@ -390,7 +439,8 @@ const Accueil = () => {
                     </div>
 
                     <div className="choose-us-img col-lg-4 animate-from-bottom">
-                        <img src={ChooseUs} alt="" />
+                        <img src={chooseUs_desktop} className='chooseUsDeskop' alt="" />
+                        <img src={chooseUs_mobile} className='chooseUsMobile' alt="" />
                     </div>
 
                     <div className="right-side col-lg-4 animate-from-right">

@@ -35,7 +35,11 @@ body{
 }
 .Home{
     .slider{
+        
         .sliderVideo{
+            video{
+                height: 100%;
+            }
             .left_sliderContenu{
                 display: flex;
                 align-items: baseline;
@@ -85,6 +89,9 @@ body{
                 }
                 .rightSlider_title{
                     color: yellow;
+                    @include res_max($screen-sm-max){
+                        font-size: 12px;
+                    }
                 }
                 p{
                     color: #fff;
@@ -107,6 +114,9 @@ body{
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    h3{
+                        font-weight: 700;
+                    }
             }
         }
     }
@@ -129,6 +139,7 @@ body{
             }
 
             .layer {
+                cursor: pointer;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -136,19 +147,64 @@ body{
                 height: 100%;
                 opacity: 45%;
                 &:hover{
-                    background-color: transparent;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+                    box-shadow: rgba(0, 0, 0, 5.35) 0 -83px 200px 50px inset;
+                    &::after{
+                        content: '';
+                        background: transparent;
+                    }
                 }
                 // background-color: rgba(0, 0, 0, 0.75);
             }
-            .layer1, .layer2{
-                background-color: #df776d;
+            .layer1{
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: #0a8645;
+                    filter: brightness(0.7);
+                  }
+                
+            }
+            .layer2{
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(222 47 27);
+                    filter: brightness(0.7);
+                  }
+                  
             }
             .layer3 {
-                background-color: #66abda;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgb(10 147 239);
+                    filter: brightness(0.7);
+                  }
+                  
             }
             .layer4 {
-                background-color: #ac80c0;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(142, 68, 173, 0.72);
+                    // filter: brightness(0.7); /* Adjust the filter effect as needed */
+                  }
             }
             .card-img {
                 position: relative;
@@ -162,6 +218,7 @@ body{
             bottom: 0;
             left: 12px;
             padding: 20px;
+            z-index: 2;
             h3{
                 color: #fff;
                 font-size: 50px;
@@ -298,11 +355,17 @@ body{
             }
             h2{
                 text-align: center;
-                font-weight: 700;
                 color: #073d6a;
+                font-size: 40px;
+                font-family: "Oswald";
+                font-weight: bold;
+                line-height: 1.093;
+                  
             }
             img{
                 margin: 0 30%;
+                width: 200px;
+                height: 200px;
                 @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                     margin: 0 20%;
                     width: 200px;
@@ -368,11 +431,12 @@ body{
                 object-fit: cover;
                 top: 45px;
                 position: relative;
+                
               }
           }
           
           
-        @media (max-width: 600px) {
+          @include res_max($screen-sm-max);@include res_max($screen-md-max){
             .bg_girl {
               background-size: contain;
               height: 450px;
@@ -380,13 +444,13 @@ body{
             }
           
             .girl-img {
-                width: 55% !important;
+              width: 55% !important;
                 height: 71% !important;
                 top: 100px !important;
-                max-width: 100%;
-                max-height: 100%;
+              max-width: 100%;
+              max-height: 100%;
             }
-        }
+          }
         img{
             
             @include res_min($screen-xxl-large-min) {
@@ -468,23 +532,30 @@ body{
         .title_master{
             text-align: center;
             .welcome_title{
-                font-weight: 800;
-                font-size: 13px;
+                font-weight: bold;
+                font-size: 30px;
                 word-spacing: 7px;
                 letter-spacing: 1px;
                 color: #073d6a;
-                transform: scale(1, 2);
+                font-family: "Oswald";
                 line-height: 65px;
+                
                 @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
-                    font-size: 10px;
+                    font-size: 14px;
                 }
                 span{
                     border-bottom: 3px solid #e74c3c;
                 }
             }
             .title-section{
-                width: 40%;
                 word-spacing: 12px;
+                font-family: "Oswald", sans-serif;
+                font-size: 64px;
+                color: rgb(7, 61, 106);
+                font-weight: bolder;
+                line-height: 1.2;
+                text-align: center;
+                letter-spacing: 1px;
                 @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                     width: 100%;
                     font-size: 25px;
@@ -494,6 +565,7 @@ body{
         
 
         .image {
+            z-index: 1;
             @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                 text-align: center;
             }
@@ -520,12 +592,23 @@ body{
                 display: block;
                 padding: 25px 15px;
             }
+            h4{
+                    font-size: 26px;
+                    font-family: "Oswald";
+                    color: rgb(255, 255, 255);
+                    font-weight: bold;
+                    line-height: 1.5;
+            }
             p {
                 width: 93%;
                 .read_more{
                     color:#f1c40f;
                     font-weight: 600;
                     text-decoration: none;
+                    cursor: pointer;
+                    &:hover{
+                        color: #cc1423;
+                    }
                 }
             }
             .play{
@@ -540,6 +623,10 @@ body{
     .choose-our-shcool {
         background-color: #f0f2f3;
         display: grid;
+        @include res_max($screen-sm-max);@include res_max($screen-md-max){
+            position: relative;
+            height: 1000px;
+        } 
         .title_our_school{
             text-align: center;
             .title-section{
@@ -548,6 +635,10 @@ body{
         }
         .card_our_school{
             animation: moveCircle1 10s infinite linear;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.10,1.10);
+            }
                 @keyframes moveCircle1 {
                     0%, 50% {
                       transform: translate3d(0, 0, 0);
@@ -557,7 +648,6 @@ body{
                     }
                   }
         }
-
         .first, .second, .third, .fourth, .fifth, .sixth {
             width: 80%;
             display: flex;
@@ -569,6 +659,7 @@ body{
             @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                 padding: 10px 4px;
                 width: 100%;
+                width: 90%;
             }
             p{
                 margin: 0;
@@ -602,6 +693,7 @@ body{
             position: relative;
             @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
                 position: absolute;
+                    top: 10%;
             }
             .first {
                 background-color: #8e44ad;
@@ -680,9 +772,23 @@ body{
         .choose-us-img {
             display: flex;
             justify-content: center;
-            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
-                top: 270px;
+            @include res_max($screen-sm-max){
+                top: 0;
                 position: relative;
+            }
+            .chooseUsDeskop{
+                @include res_max($screen-sm-max);@include res_max($screen-md-max) {
+                    display: none;
+                }
+            }
+            .chooseUsMobile{
+                display: none;
+                @include res_max($screen-sm-max);@include res_max($screen-md-max) {
+                    display: block;
+                    width: 200px;
+                    height: 350px;
+
+                }
             }
             img {
                 height: 100%;
@@ -698,9 +804,13 @@ body{
 
     .learner-profile {
         background-color: #3498db;
+        @include res_max($screen-lg-max){
+            position: relative;
+            height: 1800px;
+        }
         @include res_max($screen-sm-max){
             position: relative;
-            height: 1050px;
+            height: 1100px;
         }
         .triangle {
             position: relative;
@@ -742,6 +852,7 @@ body{
                 transition: transform 0.3s, box-shadow 0.3s;
                 overflow: hidden;
                 animation: moveCircle1 10s infinite linear;
+                cursor: pointer;
                 @keyframes moveCircle1 {
                     0%, 50% {
                       transform: translate3d(0, 0, 0);
@@ -765,7 +876,7 @@ body{
                     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
                 }
                 h6 {
-                    font-size: 30px;
+                    font-size: 20px;
                     text-align: center;
                     color: rgb(254, 254, 254);
                     font-weight: bold;
@@ -921,7 +1032,7 @@ body{
                 left: 60px;
                 overflow: hidden;
                 height: 547px;
-                @include res_max($screen-sm-max){
+                @include res_max($screen-sm-max);@include res_max($screen-md-max){
                     height: 330px;
                     left: 0;
                     text-align: center;
@@ -929,7 +1040,7 @@ body{
                 }
                 img{
                     width: 100%;
-                    @include res_max($screen-sm-max){
+                    @include res_max($screen-sm-max);@include res_max($screen-lg-max){
                         width: 60%;
                     }
                 }
@@ -992,7 +1103,7 @@ body{
   .animate-from-bottom {
     opacity: 0;
     transform: translateY(100%);
-    transition: opacity 0.5s, transform 0.5s;
+    transition: opacity 0.5s, transform 1.5s;
   }
   .animate-from-top{
     opacity: 0;

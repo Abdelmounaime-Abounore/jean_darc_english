@@ -162,15 +162,12 @@ const Navbar = () => {
               <hr className='line_megamenu'/>
               <a href="#">Admissions Policy</a>
               <hr className='line_megamenu'/>
+              
+            </div>
+            <div className="mega-menu-right">
               <a href="#">Enquire Now</a>
               <hr className='line_megamenu'/>
             </div>
-            {/* <div className="mega-menu-right">
-              <a href="#">...</a>
-              <hr className='line_megamenu'/>
-              <a href="#">...</a>
-              <hr className='line_megamenu'/>
-            </div> */}
           </div>
         </li>
         <li className="navbar-menu-item">
@@ -218,15 +215,12 @@ const Navbar = () => {
             <div className="mega-menu-center">
               <a href="#">School News</a>
               <hr className='line_megamenu'/>
-              <a href="#">Upcoming Events</a>
+              
+            </div>
+            <div className="mega-menu-right">
+            <a href="#">Upcoming Events</a>
               <hr className='line_megamenu'/>
             </div>
-            {/* <div className="mega-menu-right">
-              <a href="#">.../a>
-              <hr className='line_megamenu'/>
-              <a href="#">...</a>
-              <hr className='line_megamenu'/>
-            </div> */}
           </div>
         </li>
         <li className="navbar-menu-item">
@@ -247,15 +241,12 @@ const Navbar = () => {
               <hr className='line_megamenu'/>
               <a href="#">Enrollement</a>
               <hr className='line_megamenu'/>
-              <a href="#">Working with us</a>
-              <hr className='line_megamenu'/>
+              
             </div>
-            {/* <div className="mega-menu-right">
-              <a href="#">...</a>
-              <hr className='line_megamenu'/>
-              <a href="#">...</a>
-              <hr className='line_megamenu'/>
-            </div> */}
+            <div className="mega-menu-right">
+            <a href="#">Working with us</a>
+              <hr className='line_megamenu'/> 
+            </div>
           </div>
         </li>
 

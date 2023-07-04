@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: 20px;
   transition: all 0.3s ease;
-
+  z-index: 99999;
 
 
   .navbar-logo {
@@ -81,6 +81,13 @@
       font-weight: 500;
     }
   }
+  
+    a{
+      &:hover{
+        color: #cc1423;
+      }
+    }
+  
 
   
 }
@@ -275,6 +282,7 @@
     justify-content: space-between;
     padding: 10px;
     height: 80px;
+    z-index: 9999;
   }
 
   .navbar-logo {
@@ -508,7 +516,7 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 10px;
-  z-index: 999;
+  z-index: 99999;
 }
 
 .navbar.scrolled .navbar-logo img {
