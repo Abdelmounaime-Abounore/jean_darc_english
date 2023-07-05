@@ -280,7 +280,7 @@ const Accueil = () => {
                         <div className='shape shape6'>
                             <h6>LEADER</h6>
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                We strive to become the leaders of tomorrow.
                             </p>
                         </div>
                     </div>
@@ -374,7 +374,7 @@ const Accueil = () => {
                         </div>
                         <div className="card-info">
                             <h3>Early</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <p>Where our youngest students become creative, confident, and curious learners</p>
                         </div>
                         <div className="layer layer1"></div>
                     </div>
@@ -385,7 +385,7 @@ const Accueil = () => {
                         </div>
                         <div className="card-info">
                             <h3>Primary</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <p>Students are academically challenged while also learning to be inquisitive and caring</p>
                         </div>
                         <div className="layer layer2"></div>
                     </div>
@@ -395,7 +395,7 @@ const Accueil = () => {
                         </div>
                         <div className="card-info">
                             <h3>Lower Secondary</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <p>A time for challenge, exploration, and learning core competencies</p>
                         </div>
                         <div className="layer layer3"></div>
                     </div>
@@ -405,7 +405,7 @@ const Accueil = () => {
                         </div>
                         <div className="card-info">
                             <h3>Upper Secondary</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                            <p>Preparing our students to succeed in the real world</p>
                         </div>
                         <div className="layer layer4"></div>
                     </div>
