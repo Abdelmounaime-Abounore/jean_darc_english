@@ -1,6 +1,7 @@
 import logo from '../../../assets/images/logo.jpg'
 import open_respo from '../../../assets/images/burger-bar.png'
 import close_respo from '../../../assets/images/fermer.png'
+import { Link, NavLink } from 'react-router-dom';
 import React, { useState, useEffect  } from 'react';
 import './index.scss';
 const Navbar = () => {
@@ -98,17 +99,17 @@ const Navbar = () => {
               <p>Some description here description <br/> description description description<br/> description here.</p>
             </div>
             <div className="mega-menu-center">
-              <a href="#">Principal’s Welcome</a>
+              <NavLink exact='true' to='/PrincipalWelcome'>Principal’s Welcome</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">About Us</a>
+              <NavLink exact='true' to='/AboutUs'>About Us</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Why choose Us</a>
+              <NavLink exact='true' to='/ChooseUs'>Why choose Us</NavLink>
               <hr className='line_megamenu'/>
             </div>
             <div className="mega-menu-right">
-              <a href="#">Vision, Mission & values</a>
+              <NavLink exact='true' to='/VisionMissionValues'>Vision, Mission & values</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Testimonials</a>
+              <NavLink exact='true' to='/Testimonials'>Testimonials</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -127,19 +128,19 @@ const Navbar = () => {
               <p>Some description here description <br/> description description description<br/> description here.</p>
             </div>
             <div className="mega-menu-center">
-              <a href="#">Our Curriculum</a>
+              <NavLink exact='true' to='/OurCurriculum'>Our Curriculum</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Amazing Learning</a>
+              <NavLink exact='true' to='/AmazingLearning'>Amazing Learning</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Foundation Stages</a>
+              <NavLink exact='true' to='/FoundationStages'>Foundation Stages</NavLink>
               <hr className='line_megamenu'/>
             </div>
             <div className="mega-menu-right">
-              <a href="#">Primary School</a>
+              <NavLink exact='true' to='/PrimarySchool'>Primary School</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Secondary School</a>
+              <NavLink exact='true' to='/SecondarySchool'>Secondary School</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Inclusion & Learning support</a>
+              <NavLink exact='true' to='/InclusionLearning'>Inclusion & Learning support</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -158,14 +159,14 @@ const Navbar = () => {
               <p>Some description here description <br/> description description description<br/> description here.</p>
             </div>
             <div className="mega-menu-center">
-              <a href="#">Admissions Process</a>
+              <NavLink exact='true' to='/AdmissionsProcess'>Admissions Process</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Admissions Policy</a>
+              <NavLink exact='true' to='/AdmissionsPolicy'>Admissions Policy</NavLink>
               <hr className='line_megamenu'/>
               
             </div>
             <div className="mega-menu-right">
-              <a href="#">Enquire Now</a>
+              <NavLink exact='true' to='/EnquireNow'>Enquire Now</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -184,17 +185,17 @@ const Navbar = () => {
               <p>Some description here description <br/> description description description<br/> description here.</p>
             </div>
             <div className="mega-menu-center">
-              <a href="#">School Day</a>
+              <NavLink exact='true' to='/SchoolDay'>School Day</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Extra curricular Activitiess</a>
+              <NavLink exact='true' to='/CurricularActivitiess'>Extra curricular Activitiess</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Uniform</a>
+              <NavLink exact='true' to='/Uniform'>Uniform</NavLink>
               <hr className='line_megamenu'/>
             </div>
             <div className="mega-menu-right">
-              <a href="#">Transport</a>
+              <NavLink exact='true' to='/Transport'>Transport</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">School Policiess</a>
+              <NavLink exact='true' to='/SchoolPoliciess'>School Policiess</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -213,12 +214,12 @@ const Navbar = () => {
               <p>Some description here description <br/> description description description<br/> description here.</p>
             </div>
             <div className="mega-menu-center">
-              <a href="#">School News</a>
+              <NavLink exact='true' to='SchoolNews/'>School News</NavLink>
               <hr className='line_megamenu'/>
               
             </div>
             <div className="mega-menu-right">
-            <a href="#">Upcoming Events</a>
+              <NavLink exact='true' to='/UpcomingEvents'>Upcoming Events</NavLink>
               <hr className='line_megamenu'/>
             </div>
           </div>
@@ -237,14 +238,14 @@ const Navbar = () => {
               <p>Some description here description <br/> description description description<br/> description here.</p>
             </div>
             <div className="mega-menu-center">
-              <a href="#">Administration</a>
+              <NavLink exact='true' to='/Administration'>Administration</NavLink>
               <hr className='line_megamenu'/>
-              <a href="#">Enrollement</a>
+              <NavLink exact='true' to='/Enrollement'>Enrollement</NavLink>
               <hr className='line_megamenu'/>
               
             </div>
             <div className="mega-menu-right">
-            <a href="#">Working with us</a>
+              <NavLink exact='true' to='/WorkingUs'>Working with us</NavLink>
               <hr className='line_megamenu'/> 
             </div>
           </div>

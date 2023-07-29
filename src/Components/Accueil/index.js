@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Logo_Misssion from '../../assets/images/LogoMission.png'
-import Logo from '../../assets/images/logo.jpg'
 import Headmaster from '../../assets/images/headmaster.jfif'
 import chooseUs_desktop from '../../assets/images/chooseUs_desktop.png'
 import chooseUs_mobile from '../../assets/images/chooseUs_mobile.png'
@@ -23,19 +22,13 @@ import Globe from '../../assets/images/Globe.png'
 import anniversary from '../../assets/images/anniversary.png'
 import School from '../../assets/images/School Building.png'
 import LearnerProfile from '../../assets/images/learner-profile-removebg-preview.png'
-import guided_girl from '../../assets/images/2S3A0912.png'
 import sliderVideo_1 from '../../assets/images/integrity--.mp4'
 import sliderVideo_2 from '../../assets/images/Curious--.mp4'
 import sliderVideo_3 from '../../assets/images/committement--.mp4'
 import sliderVideo_4 from '../../assets/images/excellence--.mp4'
 import './index.scss';
-import { Link } from 'react-router-dom';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { Button } from 'bootstrap';
-// import "slick-carousel/slick/slick.css"; 
-// import "slick-carousel/slick/slick-theme.css";
-// import Slider from 'react-slick'
 
 
 const Accueil = () => {
@@ -55,27 +48,6 @@ const Accueil = () => {
       window.addEventListener('scroll', animateOnScroll);
 
 
-
-    // const responsive = {
-    //     superLargeDesktop: {
-    //       // the naming can be any, depends on you.
-    //       breakpoint: { max: 4000, min: 3000 },
-    //       items: 1
-    //     },
-    //     desktop: {
-    //       breakpoint: { max: 3000, min: 1024 },
-    //       items: 1
-    //     },
-    //     tablet: {
-    //       breakpoint: { max: 1024, min: 464 },
-    //       items: 1
-    //     },
-
-    //     mobile: {
-    //       breakpoint: { max: 464, min: 0 },
-    //       items: 1
-    //     }
-    //   };
         const responsive = {
           superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -126,55 +98,55 @@ const Accueil = () => {
             ref={carouselRef}
             beforeChange={(oldIndex, newIndex) => setActiveItem(newIndex)}
         >
-                <div className='sliderVideo'>
+                <div className='sliderVideo slider_video_1'>
                     <video src={sliderVideo_1} type="video/mp4" width={'100%'} autoPlay muted></video>
                     <div className='left_sliderContenu'>
-                        <span className='border_leftslider'></span>
+                        <span className='border_leftslider slider_title1'></span>
                         <p>always guided by our values</p>
                     </div>
 
                     <div className='right_sliderContenu'>
-                        <h4 className='rightSlider_title'>Integrity</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        <h4 className='rightSlider_title slider_title1'>Integrity</h4>
+                        <p>We do the right thing, even when faced with difficult decisions</p>
                     </div>
                 </div>
 
-                <div className='sliderVideo'>
+                <div className='sliderVideo slider_video_2'>
                     <video src={sliderVideo_2} type="video/mp4" width={'100%'} autoPlay muted></video>
                     <div className='left_sliderContenu'>
-                        <span className='border_leftslider'></span>
+                        <span className='border_leftslider slider_title2'></span>
                         <p>always guided by our values</p>
                     </div>
 
                     <div className='right_sliderContenu'>
-                        <h4 className='rightSlider_title'>Curious</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        <h4 className='rightSlider_title slider_title2'>Curious</h4>
+                        <p>We are excited to learn and have the courage to explore</p>
                     </div>
                 </div>
 
-                <div className='sliderVideo'>
+                <div className='sliderVideo slider_video_3'>
                     <video src={sliderVideo_3} type="video/mp4" width={'100%'} autoPlay muted></video>
                     <div className='left_sliderContenu'>
-                        <span className='border_leftslider'></span>
+                        <span className='border_leftslider slider_title3'></span>
                         <p>always guided by our values</p>
                     </div>
 
                     <div className='right_sliderContenu'>
-                        <h4 className='rightSlider_title'>Committement</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        <h4 className='rightSlider_title slider_title3'>Committement</h4>
+                        <p>We are dedicated and persevere in every undertaking</p>
                     </div>
                 </div>
 
-                <div className='sliderVideo'>
+                <div className='sliderVideo slider_video_4'>
                     <video src={sliderVideo_4} type="video/mp4" width={'100%'} autoPlay muted></video>
                     <div className='left_sliderContenu'>
-                        <span className='border_leftslider'></span>
+                        <span className='border_leftslider slider_title4'></span>
                         <p>always guided by our values</p>
                     </div>
 
                     <div className='right_sliderContenu'>
-                        <h4 className='rightSlider_title'>excellence</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing</p>
+                        <h4 className='rightSlider_title slider_title4'>excellence</h4>
+                        <p>High expectations drive all that we do</p>
                     </div>
                 </div>
             </Carousel>
@@ -461,84 +433,7 @@ const Accueil = () => {
             </div>
         </div>
 
-        <div className='always_guided section'>
-            <h2 className='title-section'>ALWAYS <span>GUIDED BY OUR</span> VALUES</h2>
-            <div className='container-fluid'>
-                <div className='row'>
-                    <div className='col-lg-1'></div>
-                    <div className='col-lg-2 animate-from-bottom'>
-                        <div className='bg_girl girl1'>
-                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 animate-from-bottom'>
-                        <div className='bg_girl girl2'>
-                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 animate-from-bottom'>
-                    <div className='bg_girl girl3'>
-                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 animate-from-bottom'>
-                    <div className='bg_girl girl4'>
-                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
-                        </div>
-                    </div>
-                    <div className='col-lg-2 animate-from-bottom'>
-                    <div className='bg_girl girl5'>
-                            <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {/* footer */}
-
-        <div className="footer">
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-lg-4 footer-logo">
-                        <img src={Logo}></img>
-                    </div>
-                    <div className="col-lg-2 footer-elements">
-                        <h6 className='sitemap'>SITEMAP</h6>
-                        <p>
-                            <Link>Admissions</Link>
-                        </p>
-                        <p>
-                            <Link>Gallery</Link>
-                        </p>
-                        <p>
-                            <Link>Carreer</Link>
-                        </p>
-                        <p>
-                            <Link>Enroll now</Link>
-                        </p>
-                        <p>
-                            <Link>School Policies</Link>
-                        </p>
-                    </div>
-                    <div className='col-lg-3 footer-elements'> 
-                        <h6 className='contact-datails'>CONTACT DETAILS</h6>
-                        <p>Jeanne D’Arc International School N°57 Boulevard Moulay Youssef, Anfa - Casablanca</p>
-                        <p>+212 522 22 01 70   -   +212 642 56 23 28</p>
-                        <p>contact@jeanned’arcinternational.ma</p>
-                    </div>
-                    <div className="col-lg-3 footer-elements">
-                        <h6 className='contact-us'>CONNECT WHITH US</h6>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {/* Copyright */}
-
-        <div className='copy-right'>
-            <p>ALL RIGHTS RESERVED  © 2023  - JEANNE D’ARC INTERNATIONAL SCHOOL</p>
-        </div>
+        
     </div>
   );
 };

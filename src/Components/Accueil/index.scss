@@ -35,8 +35,22 @@ body{
 }
 .Home{
     .slider{
-        
+        .slider_video_1{
+            background: #2980bb;
+        }
+        .slider_video_2{
+            background: #e67d22;
+        }
+        .slider_video_3{
+            background: #f1c310;
+        }
+        .slider_video_4{
+            background: #3497da;
+        }
         .sliderVideo{
+            @include res_min($screen-xxl-large-min){
+                height:80%;
+            }
             video{
                 height: 100%;
             }
@@ -50,18 +64,21 @@ body{
                 width: 50%;
                 text-align: left;
                 left: 3%;
+                @include res_min($screen-xxl-large-min){
+                    bottom: 25%;
+                }
                 .border_leftslider{
-                    border-bottom: 10px solid red;
-                    width: 60px;
+                    border-bottom: 15px solid ;
+                    width: 70px;
                     display: block;
                     
-                    border-left: 10px solid red;
-                    height: 60px;
+                    border-left: 15px solid ;
+                    height: 70px;
                     display: block;
 
                     @include res_max($screen-sm-max){
-                        border-bottom: 6px solid red;
-                        border-left: 6px solid red;
+                        border-bottom: 6px solid ;
+                        border-left: 6px solid ;
                         width: 40px;
                         height: 40px;
                     }
@@ -70,6 +87,11 @@ body{
                     color: #fff;
                     margin-left: 10px;
                     text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 600;
+                    @include res_min($screen-xxl-large-min){
+                        font-size: 30px;
+                    }
                     @include res_max($screen-sm-max){
                         display: none;
                     }
@@ -79,26 +101,53 @@ body{
                 display: block;
                 padding: 8px 12px;
                 position: absolute;
-                bottom: 2%;
-                width: 20%;
+                bottom: 6%;
+                width: 19%;
                 text-align: left;
                 right: 3%;
                 text-align: end;
+                @include res_min($screen-xxl-large-min){
+                    bottom: 25%;
+                }
                 @include res_max($screen-sm-max){
                     width: 40%;
                 }
                 .rightSlider_title{
-                    color: yellow;
+                    font-weight: 700;
+                    font-size: 30px;
+                    @include res_min($screen-xxl-large-min){
+                        font-size: 45px;
+                    }
                     @include res_max($screen-sm-max){
                         font-size: 12px;
                     }
+                    
                 }
                 p{
                     color: #fff;
+                    font-weight: 500;
+                    font-size: 26px;
+                    @include res_min($screen-xxl-large-min){
+                        font-size: 35px;
+                    }
                     @include res_max($screen-sm-max){
                         font-size: 11px;
                     }
+                    
                 }
+                
+            }
+            .slider_title1{
+                color: #f29b13;
+            }
+            .slider_title2{
+                color: #3498d9;
+            }
+            .slider_title3{
+                color: #1bbc9d;
+            }
+            .slider_title4{
+                color: #f1c310;
             }
         }
     }
@@ -383,150 +432,9 @@ body{
         }
     }
 
-    .always_guided{
-        margin-top: 70px;
-        margin-bottom: 70px;
-        h2{
-            text-align: center;
-            display: block;
-            span{
-                border-bottom: 4px solid #e74c3c;
-            }
-        }
-        .girl1{
-            background-image: url('../../assets/images/Imagination.png');
-        }
-        .girl2{
-            background-image: url('../../assets/images/Excellence.png');
-        }
-        .girl3{
-            background-image: url('../../assets/images/Care.png');
-        }
-        .girl4{
-            background-image: url('../../assets/images/Curiosity.png');
-        }
-        .girl5{
-            background-image: url('../../assets/images/Creativity.png');
-        }
-        .bg_girl {
-            background-size: cover;
-            background-position: center;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            text-align: center;
-            background-repeat: no-repeat;
-            @include res_max($screen-sm-max){
-                width: 80%;
-                margin: auto;
-                margin-bottom: 10%;
-            }
-            &:hover{
-                transform: scale(1.10, 1.10);
-                cursor: pointer;
-            }
-            .girl-img {
-                width: 70%;
-                height: 100%;
-                object-fit: cover;
-                top: 45px;
-                position: relative;
-                
-              }
-          }
-          
-          
-          @include res_max($screen-sm-max);@include res_max($screen-md-max){
-            .bg_girl {
-              background-size: contain;
-              height: 450px;
-              width: 300px;
-            }
-          
-            .girl-img {
-              width: 55% !important;
-                height: 71% !important;
-                top: 100px !important;
-              max-width: 100%;
-              max-height: 100%;
-            }
-          }
-        img{
-            
-            @include res_min($screen-xxl-large-min) {
-                width: 100%
-            }
-            @include res_max($screen-sm-max);@include res_max($screen-md-max);@include res_max($screen-lg-max) {
-                margin: auto;
-                display: block;
-                margin-bottom: 20px;
-            }
-        }
-    }
+   
 
-    .footer {
-        background-color: #073d6a;
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            img{
-                width: 100%;
-                @include res_max($screen-lg-max) {
-                    width: 70%;
-                }
-            }
-        }
-
-        .footer-elements {
-            margin-top: 30px;
-            margin-bottom: 30px;
-
-            h6{
-                background-color: #e74c3c;
-                margin-top: 25px;
-                margin-bottom: 25px;
-                padding: 7px;
-                font-weight: 600;
-
-                &.sitemap {
-                    display: inline-block;
-                }
-                &.contact-datails {
-                    display: inline-block;
-                }
-                &.contact-us {
-                    display: inline-block;
-                }
-            }
     
-            a {
-                text-decoration: none;
-                color: white;
-            }
-            
-            p {
-                padding-left: 20px;
-            }
-        }
-    }
-
-    .copy-right {
-        background-color: #e74c3c;  
-        color: white;
-        display: flex;
-        justify-content: center; 
-        align-items: center; 
-
-        p {
-            margin-top: auto;
-            margin-bottom: auto;
-            padding: 20px;
-            font-weight: 600;
-        }
-    }
 
     .headmaster {
         .title_master{
@@ -1064,9 +972,13 @@ body{
 
 .react-multiple-carousel__arrow {
     background-color:#073d6a !important;
+    
 }
 .react-multiple-carousel__arrow--left {
     left: calc(15% + 1px) !important;
+    @include res_min($screen-xxl-large-min){
+        top: calc(35% + 1px);
+    }
     @include res_max($screen-sm-max){
         min-width: 30px !important;
         min-height: 30px !important;
@@ -1078,6 +990,10 @@ body{
 }
 .react-multiple-carousel__arrow--right {
     right: calc(15% + 1px) !important;
+    @include res_min($screen-xxl-large-min){
+        top: calc(35% + 1px);
+    }
+    
     @include res_max($screen-sm-max){
         min-width: 30px !important;
         min-height: 30px !important;
@@ -1122,3 +1038,13 @@ body{
     overflow: hidden;
     position: relative;
   }
+.react-multiple-carousel__arrow{
+    @include res_min($screen-xxl-large-min){
+        min-width: 75px !important;
+    min-height: 75px !important;
+    &::before{
+        font-size: 35px;
+    }
+    }
+    
+}
