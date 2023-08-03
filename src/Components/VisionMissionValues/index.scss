@@ -1,6 +1,35 @@
+.mission_vision {
+    color: #073d6a;
+    width: 95%;
+    margin: auto;
 
-.home{
-    .backgroundPage_Header{
-        background-image: url(../../assets/images/Background_page1.jpg);
+    h1 {
+        border-bottom: 5px solid #e74c3c;
+        margin-bottom: 70px;
+    }
+
+    p {
+        font-weight: 600;
+    }
+}
+
+.icons {
+    background-color: #073d6a;
+    color: white;
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .excelence {
+            width: 90px;
+        }
     }
 }
