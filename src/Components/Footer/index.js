@@ -6,6 +6,21 @@ import react from 'react'
 import './index.scss'
 
 const Footer = () =>{
+    const animateOnScroll = () => {
+        const elementsToAnimate = document.querySelectorAll('.animate-from-right, .animate-from-left, .animate-from-bottom, .animate-from-top, .animate-from-in');
+      
+        elementsToAnimate.forEach(element => {
+          const elementOffset = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+      
+          if (elementOffset < windowHeight - 100) {
+            element.classList.add('animate');
+          }
+        });
+      };
+      
+      window.addEventListener('scroll', animateOnScroll);
+
     return(
         <div className='Footer'>
             <div className='always_guided section'>
@@ -13,27 +28,27 @@ const Footer = () =>{
             <div className='container-fluid'>
                 <div className='row'>
                     <div className='col-lg-1'></div>
-                    <div className='col-lg-2 animate-from-bottom'>
+                    <div className='col-lg-2 animate-from-bottom '>
                         <div className='bg_girl girl1'>
                             <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
                         </div>
                     </div>
-                    <div className='col-lg-2 animate-from-bottom'>
+                    <div className='col-lg-2 animate-from-bottom '>
                         <div className='bg_girl girl2'>
                             <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
                         </div>
                     </div>
-                    <div className='col-lg-2 animate-from-bottom'>
+                    <div className='col-lg-2 animate-from-bottom '>
                     <div className='bg_girl girl3'>
                             <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
                         </div>
                     </div>
-                    <div className='col-lg-2 animate-from-bottom'>
+                    <div className='col-lg-2 animate-from-bottom '>
                     <div className='bg_girl girl4'>
                             <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
                         </div>
                     </div>
-                    <div className='col-lg-2 animate-from-bottom'>
+                    <div className='col-lg-2 animate-from-bottom '>
                     <div className='bg_girl girl5'>
                             <img src={guided_girl} className="girl-img" alt="Guided Girl"></img>
                         </div>

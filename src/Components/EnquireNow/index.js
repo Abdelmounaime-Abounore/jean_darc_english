@@ -3,9 +3,13 @@ import './index.scss'
 
 const AnquireNow = () =>{
     return(
-        <>
-        <h1>AnquireNow</h1>
-        </>
+        <div className="home">
+            <div className="backgroundPage_Header">
+                <div className="titlebgPage_Header">
+                    <h1>Lorem Ipsum is simply dummy text of the printing</h1>
+                </div>
+            </div>
+        </div>
     )
 }
 

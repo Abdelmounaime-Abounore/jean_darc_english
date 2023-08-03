@@ -156,7 +156,9 @@ $screen-xxl-xlarge-min: 3000px;
         
         p {
             padding-left: 20px;
-            
+            a:hover{
+                color: #cc1423;
+            }
         }
     }
 }
@@ -176,3 +178,38 @@ $screen-xxl-xlarge-min: 3000px;
     }
 }
 }
+
+.animate-from-right {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  
+  .animate-from-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  
+  .animate-from-bottom {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  .animate-from-top{
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s, transform 1.5s;
+  }
+  .animate-from-in{
+    opacity: 0;
+    transition: opacity 1s, transform 1.5s;
+  }
+  .animate {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+  }
+  .section{
+    overflow: hidden;
+    position: relative;
+  }
