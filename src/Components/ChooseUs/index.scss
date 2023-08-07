@@ -1,6 +1,103 @@
-
-.home{
+.accueil{
     .backgroundPage_Header{
-        background-image: url(../../assets/images/Background_page1.jpg);
+        background-image: url(../../assets/images/chooseus.jpeg);
     }
+
+  ::selection{
+    background: rgba(187, 134, 252, 0.5);
+    color: #fff;
+  }
+      
+  .container{
+    width: 100%;
+    padding: 50px 40px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 12px;
+    background: #f3eee8;
+    box-shadow: 0px 4px 16px rgba(254, 205, 211, 0.1), 0px 8px 24px rgba(254, 205, 211, 0.1), 0px 16px 56px rgba(254, 205, 211, 0.1);
+
+    .content{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      input{
+        display: none;
+      }
+
+      .list{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        margin-right: 50px;
+
+        label{
+          cursor: pointer;
+          margin: 20px;
+          font-size: 15px;
+          font-weight: 500;
+          color: #a0936d;
+          padding: 10px;
+          transition: all 0.5s ease;
+          z-index: 10;    
+        }
+      }
+
+      .text-content{
+        width: 80%;
+        height: 100%;
+        color: #95908a;
+
+        .text{
+          display: none;
+          img {
+            width: 100%;
+            margin-bottom: 30px;
+          }
+
+          p{
+            text-align: justify;
+            font-weight: 600;
+          }
+        }
+
+        .home{
+          display: block;
+        }
+      } 
+    }
+  }
+  
+  #home:checked ~ .list label.home,
+  #blog:checked ~ .list label.blog,
+  #help:checked ~ .list label.help,
+  #code:checked ~ .list label.code,
+  #about:checked ~ .list label.about{
+    color: #ffffff;
+    background-color: rgba(133,109,49,255)
+    ;
+  }
+  
+  #home:checked ~ .text-content .home,
+  #blog:checked ~ .text-content .blog,
+  #help:checked ~ .text-content .help,
+  #code:checked ~ .text-content .code,
+  #about:checked ~ .text-content .about{
+    display: block;
+  }
+  
+  #blog:checked ~ .text-content .home,
+  #help:checked ~ .text-content .home,
+  #code:checked ~ .text-content .home,
+  #about:checked ~ .text-content .home{
+    display: none;
+  }
+  
+  .content .list label:hover{
+    color: #856d31;
+  }
 }
+
